@@ -2,15 +2,6 @@
 ctrl+k只是提交到本地，并未push到github
 ctrl+shift+k  push到github上
 
-ctrl+T   从github上更新
-阿斯顿发生飞洒地方
-萨芬
-sdfs
-gikghjk
-asfsfd
+ctrl+T   从github上更新  如果有冲突而第一次未merger，本地文件会直接更新。
+手动解决冲突后 add 然后 commit并push
 
-艾丝凡
-=======
-
-
-啊所发生的
