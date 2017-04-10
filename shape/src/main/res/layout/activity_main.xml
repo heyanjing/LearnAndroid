@@ -4,32 +4,60 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/shape"
-        android:text="按钮" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/shape1"
-        android:text="按钮" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/shape2"
-        android:text="按钮" />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape"
+                android:text="shape" />
 
-    <Button
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/shape3"
-        android:text="按钮" />
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape1"
+                android:text="shape1" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape2"
+                android:text="shape2" />
+
+            <Button
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/shape3"
+                android:text="shape3" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_selector"
+                android:clickable="true"
+                android:text="shape_selector"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/drawable_selector" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
 
 </LinearLayout>

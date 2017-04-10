@@ -2,7 +2,7 @@
 <!--
 http://blog.csdn.net/iispring/article/details/50437731
 -->
-<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
     <!--半径
     radius指定四个角的半径
     topRightRadius,

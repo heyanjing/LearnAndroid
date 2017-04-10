@@ -1,1 +1,1 @@
-include ':shape'
+include ':shape', ':viewpager'
