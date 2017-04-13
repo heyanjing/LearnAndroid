@@ -1,20 +1,17 @@
 package android.he.com.glide;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.he.com.glide.singleton.Singleton;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.lzy.okgo.OkGo;
-import com.lzy.okgo.cache.CacheMode;
-import com.lzy.okgo.callback.StringCallback;
+import com.bumptech.glide.load.resource.bitmap.CenterCrop;
 
-import okhttp3.Call;
-import okhttp3.Response;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
     ImageView imageView;
     ImageView imageView1;
     TextView textView;
@@ -34,33 +31,55 @@ public class MainActivity extends AppCompatActivity {
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView1 = (ImageView) findViewById(R.id.imageView1);
         textView = (TextView) findViewById(R.id.textView);
-       Glide
-               .with(this)
+       Glide.with(this)
                .load(images[5])
+               .listener(Singleton.getInstance())
                .placeholder(R.mipmap.ic_launcher)
                .error(R.mipmap.ic_launcher)
                .fallback(R.mipmap.ic_launcher)
                .crossFade()
+               .transform(new CenterCrop(this))
                .into(imageView);
-
-
-
-
 
         Glide.with(this).load(images[0]).asBitmap().into(imageView1);
 
-        OkGo.get("https://raw.github.com/square/okhttp/master/README.md")     // 请求方式和请求url
-                .tag(this)                       // 请求的 tag, 主要用于取消对应的请求
-                .cacheKey("cacheKey")            // 设置当前请求的缓存key,建议每个不同功能的请求设置一个
-                .cacheMode(CacheMode.IF_NONE_CACHE_REQUEST)    // 缓存模式，详细请看缓存介绍
-                .execute(new StringCallback() {
-                    @Override
-                    public void onSuccess(String s, Call call, Response response) {
-                        // s 即为所需要的结果
-                        Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
-                    }
-                });
+//        RequestManager rm= Glide.with(this);
+//        GenericRequestBuilder grb=rm.load("url");
+//        grb.into(null);
 
 
+
+
+
+
+
+
+
+
+
+
+
+//        OkGo.get("https://raw.github.com/square/okhttp/master/README.md")     // 请求方式和请求url
+//                .tag(this)                       // 请求的 tag, 主要用于取消对应的请求
+//                .cacheKey("cacheKey")            // 设置当前请求的缓存key,建议每个不同功能的请求设置一个
+//                .cacheMode(CacheMode.IF_NONE_CACHE_REQUEST)    // 缓存模式，详细请看缓存介绍
+//                .execute(new StringCallback() {
+//                    @Override
+//                    public void onSuccess(String s, Call call, Response response) {
+//                        // s 即为所需要的结果
+//                        Toast.makeText(MainActivity.this, s, Toast.LENGTH_SHORT).show();
+//                    }
+//                });
+
+
+    }
+    public void showeListView(View view){
+
+        Intent intent= new Intent(this,ListViewActivity.class);
+        startActivity(intent);
+    }public void showeViedoView(View view){
+
+        Intent intent= new Intent(this,VideoViewActivity.class);
+        startActivity(intent);
     }
 }

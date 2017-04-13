@@ -3,6 +3,7 @@
     package="android.he.com.glide">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".GApp"
         android:allowBackup="true"
@@ -18,9 +19,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
             android:value="GlideModule" />
+
+        <activity android:name=".ListViewActivity" />
+        <activity android:name=".VideoViewActivity"></activity>
     </application>
 
 </manifest>
