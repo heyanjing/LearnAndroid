@@ -1,1 +1,1 @@
-include ':shape', ':viewpager', ':glide', ':loadimgs', ':okgo', ':okgodemo'
+include ':shape', ':viewpager', ':glide', ':loadimgs', ':okgo', ':okgodemo', ':refresh-load'
